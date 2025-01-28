@@ -1,0 +1,1037 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('images/11.png');
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: relative; /* Keeps the image fixed during scrolling */
+  color: white; /* Ensures the text is white for better contrast */
+  margin: 0; /* Removes default margins */
+  height: 300vh; /* Ensures the body takes up the full viewport height */
+}
+
+
+  /* Floating Navigation */
+  .floating-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+    z-index: 1000;
+    background: transparent; /* Transparent background */
+    backdrop-filter: blur(80px); /* Optional: Add blur effect */
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .nav-links .nav-link {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .nav-links .nav-link:hover {
+    color: #1e5309;
+  }
+ 
+  .nav-link img, 
+.nav-link i {
+    transition: transform 0.3s, color 0.3s;
+}
+
+.nav-link:hover img {
+    transform: translateY(-5px);
+}
+
+
+
+
+
+  
+  .right-options .nav-link {
+    color: white;
+    margin: 0 10px;
+    font-size: 18px;
+  }
+  
+  .right-options .nav-link:hover {
+    color: #1e5309;
+  }
+  
+  /* Dropdown Styles */
+  .dropdown-menu {
+    color: #1e5309;
+    background: transparent;
+    backdrop-filter: blur(8000px);
+  }
+  
+  .dropdown-item {
+    color: white;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #206106;
+    color: black;
+  }
+  
+
+
+
+  /* Base style for the three-bar icon */
+.three-bars {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  top: 4.5px;
+  left: -15px;
+  transition: color 0.3s;
+}
+
+.three-bars span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 7px 0;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Hover effect: change bar color to green */
+.nav-link:hover .three-bars span {
+  background-color: #1e5309;
+}
+
+/* Click effect: transform the bars into a vertical layout */
+.nav-link.authDropdown[aria-expanded="true"] .three-bars span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.nav-link.authDropdown[aria-expanded="true"] .three-bars span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-link.authDropdown[aria-expanded="true"] .three-bars span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Dropdown menu styling for better appearance */
+.dropdown-menu {
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+  
+  
+
+
+
+  /* General Frame Styling */
+.glossy-frame {
+    width: 250px;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glossy effect */
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative; /* Fixed position for right middle placement */
+    top: 80px; /* Align to the middle vertically */
+    right: -975px; /* Align to the right side with a small margin */
+    transform: translateY(-50%); /* Center the frame vertically */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  /* Slider Container */
+  .slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  /* Individual Slide */
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Initially off-screen */
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .slide.active {
+    left: 0; /* Move into view */
+    opacity: 1;
+  }
+  
+  .slide img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+  
+  /* Slide Text */
+  .slide-text {
+    text-align: center;
+    color: white;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+  }
+  
+  .title {
+    font-size: 20px;
+    margin: 10px 0;
+    color: white;
+  }
+  
+  .buy-now {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .buy-now:hover {
+    background: white;
+    color: black;
+  }
+  
+  /* Pagination Dots */
+  .pagination {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .dot.active {
+    background: white;
+  }
+  
+
+
+
+
+
+
+/* Main Dashboard Styling */
+.main-dashboard {
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  position: relative; /* Fixed position for right middle placement */
+  top: 150px; /* Align to the middle vertically */
+  left: 35px; /* Align to the right side with a small margin */
+  padding: 20px;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.main-subtitle {
+  font-size: 1rem;
+  margin: 10px 0 20px;
+  line-height: 1.5;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Explore Button Styling */
+.explore-button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.explore-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Live Demo Button Styling */
+.live-demo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect */
+.live-demo:hover {
+  color: #1e5309; /* Change text color on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+
+
+
+.play-icon {
+  font-size: 1.2rem;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Floating Video Modal Styling */
+.video-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  left: -150px;
+}
+
+iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+.close-video {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.close-video:hover {
+  background: red;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.glossy-frame1 {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 50px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 60px ;
+  top: 10px ;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.rating {
+  margin-bottom: 10px;
+}
+
+.star {
+  font-size: 18px;
+  color: gold;
+}
+
+.review {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+
+/* headline */
+.top-selling-frame {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  left: 330px;
+  top: 120px;
+  text-align: center;
+  background: transparent;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.781);
+  
+}
+
+.top-selling-frame h1 {
+  margin: 0;
+  position: relative;
+  font-size: 70px;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+.product-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 20px;
+  width: 1170px;
+  position: relative;
+  top: 230px;
+  left: 60px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.image-section img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.content-section {
+  margin-left: 150px;
+  flex: 1;
+}
+
+.content-section h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content-section p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.explore-btn {
+  background: none;
+  color: white;
+  border: 1px solid white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: white;
+  color: #1e241b;
+}
+
+.cart-btn {
+  background: none;
+  color: white;
+  border: 1px solid white;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+  background: white;
+  color: #1e241b;
+}
+
+
+
+
+
+
+
+
+
+
+
+.product-card2 {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 20px;
+  width: 1170px;
+  position: relative;
+  top: 285px;
+  left: 60px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.image-section2 {
+  margin-left: 20px;
+}
+
+.image-section2 img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.content-section2 {
+  margin-left: 30px;
+  flex: 1;
+}
+
+.content-section2 h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content-section2 p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.explore-btn {
+  background: none;
+  color: white;
+  border: 1px solid white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: white;
+  color: #1e241b;
+}
+
+.cart-btn {
+  background: none;
+  color: white;
+  border: 1px solid white;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+  background: white;
+  color: #1e241b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.top-selling-section {
+  clear: both; /* Ensures it starts below any floated elements */
+  background-color: #101710; /* Dark green background */
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the image fixed during scrolling */
+  color: white; /* Ensures the text is white for better contrast */
+  margin: 0; /* Removes default margins */
+  padding: 100px 200px;
+  height: 300vh; /* Ensures the body takes up the full viewport height */
+  text-align: center;
+  position: relative; /* Ensures proper stacking */
+}
+
+
+
+.top-selling-section {
+  position: relative;
+  top: 336px; /* Moves the section 20px down */
+  left: -10px; /* Moves the section 30px to the right */
+  background-color: #101710;
+  margin-right: -50px; /* Extends the section 50px to the right */
+}
+
+
+
+
+.section-frame h1 {
+  margin: 0;
+  position: relative;
+  font-size: 70px;
+  z-index: 0;
+}
+
+.section-heading {
+  font-size: 50px; /* Adjust font size as needed */
+  font-weight: 400; /* Regular font weight */
+  color: white; /* White text color */
+  text-align: center; /* Center-align the text */
+  background-color: #1b251b; /* Semi-transparent black background */
+  padding: 10px 20px; /* Add spacing around the text */
+  border-radius: 30px; /* Rounded corners for the background */
+  display: inline-block; /* Ensure the background wraps around the text */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.728); /* Subtle shadow for better readability */
+  position: relative;
+  top: -40px;
+}
+
+
+
+
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr); /* 3 cards per row */
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Individual Card */
+.card {
+  background: #1b251b; /* Slightly lighter green */
+  border-radius: 50px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Image */
+.card-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  position: relative;
+  left: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Card Description */
+.card-description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+}
+
+/* Card Footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.review-section {
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+  top: 200px;
+}
+
+.review-title {
+  font-size: 50px; /* Adjust font size as needed */
+  font-weight: 400; /* Regular font weight */
+  color: white; /* White text color */
+  text-align: center; /* Center-align the text */
+  background-color: #1b251b; /* Semi-transparent black background */
+  padding: 10px 20px; /* Add spacing around the text */
+  border-radius: 30px; /* Rounded corners for the background */
+  display: inline-block; /* Ensure the background wraps around the text */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.728); /* Subtle shadow for better readability */
+  position: relative;
+  top: -50px;
+  left: 45px ;
+}
+
+
+
+.review-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr); /* 3 cards per row */
+  gap: 30px;
+  justify-content: center;
+  position: relative;
+  left:45px ;
+  
+}
+
+.review-card {
+  background-color: #101710; /* Slightly lighter dark color for card */
+  border-radius: 50px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Individual Card */
+.review-card {
+  background: #1b251b; /* Slightly lighter green */
+  border-radius: 50px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+}
+
+.profile {
+  margin-bottom: 15px;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #00ff00; /* Neon green border */
+}
+
+.profile h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stars {
+  color: #ffd700; /* Gold color for stars */
+  font-size: 18px;
+}
+
+.review-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cccccc; /* Light gray for readability */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+
+.footer {
+  background-color: #1e2c1e; /* Footer background */
+  padding: 40px 20px;
+  position: relative;
+  top: 425px;
+  margin-right: -390px; /* Extends the section 50px to the right */
+  left: -190px;
+
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+}
+
+.footer-info,
+.footer-links,
+.footer-subscribe {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  font-size: 30px;
+  margin-right: 150px;
+}
+
+.footer-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  
+}
+
+.social-icon:hover {
+  background-color: #00ff00; /* Neon green hover effect */
+}
+
+
+.footer-subscribe form {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  left: -50px;
+}
+
+.footer-subscribe input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-subscribe input::placeholder {
+  color: #cccccc; /* Light gray placeholder */
+}
+
+.footer-subscribe button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #00ff00; /* Neon green button */
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-subscribe button:hover {
+  background-color: #1e3d09; /* Dark hover effect */
+  color: white;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #cccccc;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+
+

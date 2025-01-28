@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planto</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+
+  <!-- Background Image -->
+  <div class="background-image">
+    <!-- Floating Navigation -->
+    <header class="floating-nav d-flex align-items-center justify-content-between">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="images/12.png" alt="Logo" width="100">
+      </div>
+      <!-- Navigation Links -->
+      <nav class="nav-links d-flex align-items-center">
+        <a href="#home" class="nav-link">Home</a>
+        <div class="dropdown">
+          <a href="#" class="nav-link dropdown-toggle" id="plantsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Plants Type
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="plantsDropdown">
+            <li><a class="dropdown-item" href="#plant1">Plant Type 1</a></li>
+            <li><a class="dropdown-item" href="#plant2">Plant Type 2</a></li>
+            <li><a class="dropdown-item" href="#plant3">Plant Type 3</a></li>
+          </ul>
+        </div>
+        <a href="#more" class="nav-link">More</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <!-- Right Side Options -->
+      <div class="right-options d-flex align-items-center">
+        <!-- Icons -->
+        <a href="#cart" class="nav-link"><img src="images/2.png" alt="bootstrap-icons" width="25"><i class="bi bi-cart"></i></a>
+        <a href="#search" class="nav-link"><img src="images/1.png" alt="bootstrap-icons" width="25"><i class="bi bi-search"></i></a>
+        <!-- Dropdown for Sign In and Registration -->
+        <div class="dropdown ms-3">
+          <a  class="nav-link authDropdown" id="authDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="three-bars">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="authDropdown">
+            <li><a class="dropdown-item" href="#signup">Sign Up</a></li>
+            <li><a class="dropdown-item" href="#signin">Sign In</a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </header>
+
+    <!-- Content Section -->
+
+     <!-- Main Section -->
+<div class="main-dashboard">
+  <h1 class="main-title">Breath Natural</h1>
+  <p class="main-subtitle">
+    It is very important for the customer to follow the coaching process, but I will give it this time
+    <br>They happened with great labor and pain.
+  </p>
+  <div class="button-container">
+    <!-- Explore Button -->
+    <a href="#" class="explore-button">Explore</a>
+
+    <!-- Live Demo Button -->
+    <div class="live-demo" onclick="openVideo()">
+      <i class="play-icon">&#9658;</i>
+      <span>Live Demo...</span>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Video Modal -->
+<div class="video-modal" id="videoModal">
+  <div class="video-container">
+    <iframe
+      id="youtubeVideo"
+      width="560"
+      height="315"
+      src=""
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <button class="close-video" onclick="closeVideo()">×</button>
+  </div>
+</div>
+
+   
+
+    <div class="glossy-frame">
+        <!-- Slider Container -->
+        <div class="slider">
+          <!-- Slide 1 -->
+          <div class="slide active">
+            <img src="images/14.png" alt="Calathea Plant">
+            <div class="slide-text">
+              <p class="subtitle">Trendy House Plant</p>
+              <h1 class="title">Calathea plant</h1>
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide">
+            <img src="images/6.png" alt="Fiddle Leaf Plant">
+            <div class="slide-text">
+              <p class="subtitle">Elegant House Plant</p>
+              <h1 class="title">Fiddle Leaf Fig</h1>
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="slide">
+            <img src="images/7.png" alt="Monstera Plant">
+            <div class="slide-text">
+              <p class="subtitle">Stylish House Plant</p>
+              <h1 class="title">Monstera Deliciosa</h1>
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Pagination Dots -->
+        <div class="pagination">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
+
+      
+      <div class="glossy-frame1">
+        <div class="profile-image">
+          <img src="images/16.png" alt="Profile Picture">
+        </div>
+        <div class="content">
+          <h3 class="name">A.S.M. ZOBAYER</h3>
+          <div class="rating">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9734;</span>
+          </div>
+          <p class="review">It is very important for the customer to be aware of the customer's needs, but this kind of thing happens at the same time..</p>
+        </div>
+      </div>
+      
+      <div class="top-selling-frame">
+        <h1>Our Trendy plants</h1>
+      </div>
+      
+
+
+
+      <div class="product-card">
+        <div class="image-section">
+          <img src="images/6.png" alt="Plant Image">
+        </div>
+        <div class="content-section">
+          <h3>For Small Decs Ai Plat</h3>
+          <p>It is important to take care of the patient, to be followed by the client, but at the same time they will be affected by some great pains and sufferings</p>
+          <div class="price">Tk. 599/-</div>
+          <div class="actions">
+            <button class="explore-btn">Explore</button>
+            <button class="cart-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                <path d="M8 1a2 2 0 0 0-2 2v1H3.5A1.5 1.5 0 0 0 2 5.5v8A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 12.5 4H10V3a2 2 0 0 0-2-2zm3 3H5V3a1 1 0 0 1 2 0v1h2V3a1 1 0 0 1 2 0v1z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="product-card2">
+        <div class="content-section2">
+          <h3>For Small Decs Ai Plat</h3>
+          <p>It is important to take care of the patient, to be followed by the client, but at the same time they will be affected by some great pains and sufferings</p>
+          <div class="price">Tk. 699/-</div>
+          <div class="actions">
+            <button class="explore-btn">Explore</button>
+            <button class="cart-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                <path d="M8 1a2 2 0 0 0-2 2v1H3.5A1.5 1.5 0 0 0 2 5.5v8A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 12.5 4H10V3a2 2 0 0 0-2-2zm3 3H5V3a1 1 0 0 1 2 0v1h2V3a1 1 0 0 1 2 0v1z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="image-section2">
+          <img src="images/7.png" alt="Plant Image">
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <!-- Our Top Selling Section -->
+<section class="top-selling-section">
+  <h1 class="section-heading">Our Top Selling</h1>
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="images/14.png" alt="Calathea plant" class="card-image">
+      <h3 class="card-title">Chinese Evergreen</h3>
+      <p class="card-description"> It is highly favored for its adaptability and low-maintenance care, thriving in low to medium light</p>
+      <div class="card-footer">
+        <span class="card-price">Tk. 999/-</span>
+        <button class="cart-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+            <path d="M8 1a2 2 0 0 0-2 2v1H3.5A1.5 1.5 0 0 0 2 5.5v8A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 12.5 4H10V3a2 2 0 0 0-2-2zm3 3H5V3a1 1 0 0 1 2 0v1h2V3a1 1 0 0 1 2 0v1z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Repeat cards -->
+    <div class="card">
+      <img src="images/6.png" alt="Calathea plant" class="card-image">
+      <h3 class="card-title">Peace Lily</h3>
+      <p class="card-description">It is a popular houseplant known for its lush green leaves and occasional white blooms</p>
+      <div class="card-footer">
+        <span class="card-price">Tk. 259/-</span>
+        <button class="cart-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+            <path d="M8 1a2 2 0 0 0-2 2v1H3.5A1.5 1.5 0 0 0 2 5.5v8A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 12.5 4H10V3a2 2 0 0 0-2-2zm3 3H5V3a1 1 0 0 1 2 0v1h2V3a1 1 0 0 1 2 0v1z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/5.png" alt="Calathea plant" class="card-image">
+      <h3 class="card-title">Blue Torch Cactus</h3>
+      <p class="card-description">A striking cactus species known for its vibrant blue-green stem and golden spines</p>
+      <div class="card-footer">
+        <span class="card-price">Tk. 399/-</span>
+        <button class="cart-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+            <path d="M8 1a2 2 0 0 0-2 2v1H3.5A1.5 1.5 0 0 0 2 5.5v8A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 12.5 4H10V3a2 2 0 0 0-2-2zm3 3H5V3a1 1 0 0 1 2 0v1h2V3a1 1 0 0 1 2 0v1z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/4.png" alt="Calathea plant" class="card-image">
+      <h3 class="card-title">Monstera deliciosa</h3>
+      <p class="card-description">Its iconic large, glossy green leaves with natural splits and holes make it a popular decorative indoor plant</p>
+      <div class="card-footer">
+        <span class="card-price">Tk. 959/-</span>
+        <button class="cart-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+            <path d="M8 1a2 2 0 0 0-2 2v1H3.5A1.5 1.5 0 0 0 2 5.5v8A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 12.5 4H10V3a2 2 0 0 0-2-2zm3 3H5V3a1 1 0 0 1 2 0v1h2V3a1 1 0 0 1 2 0v1z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/3.png" alt="Calathea plant" class="card-image">
+      <h3 class="card-title">Bird of Paradise</h3>
+      <p class="card-description">Bird of Paradise is a common choice for modern decor due to its striking foliage</p>
+      <div class="card-footer">
+        <span class="card-price">Tk. 459/-</span>
+        <button class="cart-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+            <path d="M8 1a2 2 0 0 0-2 2v1H3.5A1.5 1.5 0 0 0 2 5.5v8A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 12.5 4H10V3a2 2 0 0 0-2-2zm3 3H5V3a1 1 0 0 1 2 0v1h2V3a1 1 0 0 1 2 0v1z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/13.png" alt="Calathea plant" class="card-image">
+      <h3 class="card-title">Aloe Vera</h3>
+      <p class="card-description"> Compact size and white speckled markings on the leaves. Commonly used as a houseplant</p>
+      <div class="card-footer">
+        <span class="card-price">Tk. 359/-</span>
+        <button class="cart-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+            <path d="M8 1a2 2 0 0 0-2 2v1H3.5A1.5 1.5 0 0 0 2 5.5v8A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 12.5 4H10V3a2 2 0 0 0-2-2zm3 3H5V3a1 1 0 0 1 2 0v1h2V3a1 1 0 0 1 2 0v1z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+  </div>
+
+
+  <div class="review-section">
+    <h1 class="review-title">Customer Review</h1>
+    <div class="review-cards">
+      <!-- Card 1 -->
+      <div class="review-card">
+        <div class="profile">
+          <img src="images/17.png" alt="Profile Picture">
+          <h3>MK. Islam Shanto</h3>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p>It is important to take care of the patient, to be followed by the patient, but it will happen at such a time that there is a lot of work and pain. For to come to my mind,</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="review-card">
+        <div class="profile">
+          <img src="images/19.png" alt="Profile Picture">
+          <h3>Md. Tanvir Hossen</h3>
+          <div class="stars">★★★★☆</div>
+        </div>
+        <p>It is important to take care of the patient, to be followed by the patient, but it will happen at such a time that there is a lot of work and pain. For to come to my mind,</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="review-card">
+        <div class="profile">
+          <img src="images/18.png" alt="Profile Picture">
+          <h3>Md. Omar Faruk</h3>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p>It is important to take care of the patient, to be followed by the patient, but it will happen at such a time that there is a lot of work and pain. For to come to my mind,</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo and Description -->
+        <div class="footer-info">
+          <h1 class="footer-logo">
+            <span class="logo-icon"></span> 
+            <img src="images/12.png" alt="Logo" width="100">
+          </h1>
+          <p>It is important to take care of the patient, to be followed by the patient, but it will happen at such a time that there is a lot of work and pain.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon">FB</a>
+            <a href="#" class="social-icon">TW</a>
+            <a href="#" class="social-icon">LI</a>
+          </div>
+        </div>
+  
+        <!-- Quick Links -->
+        <div class="footer-links">
+          
+        </div>
+  
+        <!-- Subscription Section -->
+        <div class="footer-subscribe">
+          <h3>For Every Update.</h3> <br>
+          <form id="subscribe-form">
+            <input type="email" placeholder="Enter Email" required>
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>planto © all right reserve</p>
+      </div>
+    </footer>
+</section>
+
+
+
+
+
+      
+      
+
+
+    
+   
+
+      
+      
+
+
+
+
+
+
+
+  <!-- Bootstrap JS and Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
